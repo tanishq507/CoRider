@@ -61,8 +61,8 @@ The API will be available at `http://localhost:5000`
 5. In the `Body` section, select `raw` and enter the JSON data:
    ```json
    {
-     "name": "John Doe",
-     "email": "john@example.com",
+     "name": "Tanish",
+     "email": "tanish@example.com",
      "password": "password123"
    }
    ```
