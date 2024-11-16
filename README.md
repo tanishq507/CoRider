@@ -1,4 +1,4 @@
-# Assignment
+# Assignment 
 
 A production-ready Flask REST API with MongoDB backend, using Docker for deployment.
 
@@ -9,7 +9,7 @@ A production-ready Flask REST API with MongoDB backend, using Docker for deploym
 
 ## Project Structure
 ```
-.
+
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -22,8 +22,9 @@ A production-ready Flask REST API with MongoDB backend, using Docker for deploym
 ├── resources/
 │   └── user.py
 ├── schemas/
-   └── user_schema.py
-
+│   └── user_schema.py
+└── tests/
+    └── test_user.py
 ```
 
 ## Setup Instructions
@@ -50,42 +51,49 @@ The API will be available at `http://localhost:5000`
 - `PUT /users/<id>` - Update a specific user
 - `DELETE /users/<id>` - Delete a specific user
 
-## Testing the API
+## Testing the API with Postman
 
 ### Create a User
-```bash
-curl -X POST http://localhost:3000/users \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Tanish123",
-    "email": "tanish@example.com",
-    "password": "password123"
-  }'
-```
+1. Open Postman.
+2. Create a new `POST` request.
+3. Set the URL to `http://localhost:3000/users`.
+4. In the `Headers` section, add `Content-Type: application/json`.
+5. In the `Body` section, select `raw` and enter the JSON data:
+   ```json
+   {
+     "name": "John Doe",
+     "email": "john@example.com",
+     "password": "password123"
+   }
+   ```
+6. Send the request.
 
 ### Get All Users
-```bash
-curl http://localhost:3000/users
-```
+1. Create a new `GET` request.
+2. Set the URL to `http://localhost:3000/users`.
+3. Send the request.
 
 ### Get a Specific User
-```bash
-curl http://localhost:3000/users/<user_id>
-```
+1. Create a new `GET` request.
+2. Set the URL to `http://localhost:3000/users/<user_id>` (replace `<user_id>` with the actual user ID).
+3. Send the request.
 
 ### Update a User
-```bash
-curl -X PUT http://localhost:3000/users/<user_id> \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Updated Name"
-  }'
-```
+1. Create a new `PUT` request.
+2. Set the URL to `http://localhost:3000/users/<user_id>` (replace `<user_id>` with the actual user ID).
+3. In the `Headers` section, add `Content-Type: application/json`.
+4. In the `Body` section, select `raw` and enter the JSON data:
+   ```json
+   {
+     "name": "Updated Name"
+   }
+   ```
+5. Send the request.
 
 ### Delete a User
-```bash
-curl -X DELETE http://localhost:3000/users/<user_id>
-```
+1. Create a new `DELETE` request.
+2. Set the URL to `http://localhost:3000/users/<user_id>` (replace `<user_id>` with the actual user ID).
+3. Send the request.
 
 ## Running Tests
 ```bash
@@ -103,16 +111,7 @@ docker-compose exec api pytest
 - ✅ Unit tests with pytest
 - ✅ Production-ready configuration
 
-## Security Features
-- Password hashing (implemented in User model)
-- Input validation and sanitization
-- Environment variable configuration
-- Secure MongoDB connection
 
-## Production Considerations
-- Use proper secret management for production
-- Implement rate limiting
-- Add authentication middleware
-- Set up proper logging
-- Configure CORS if needed
-- Use HTTPS in production
+
+
+
