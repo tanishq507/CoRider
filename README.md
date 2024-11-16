@@ -22,7 +22,7 @@ A production-ready Flask REST API with MongoDB backend, using Docker for deploym
 ├── resources/
 │   └── user.py
 ├── schemas/
-│   └── user_schema.py
+   └── user_schema.py
 
 ```
 
@@ -30,7 +30,7 @@ A production-ready Flask REST API with MongoDB backend, using Docker for deploym
 
 1. Clone the repository (if using Git):
    ```bash
-   git clone <>
+   git clone <https://github.com/tanishq507/CoRider.git>
    cd <Project>
    ```
 
