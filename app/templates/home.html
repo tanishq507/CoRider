@@ -1,0 +1,39 @@
+<content><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">User Management API</h1>
+            
+            <div class="space-y-4">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">API Documentation</h2>
+                    <p class="text-gray-600 mb-4">
+                        Explore our API documentation using Swagger UI for detailed information about available endpoints and how to use them.
+                    </p>
+                    <a href="/swagger" class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        View API Docs
+                    </a>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4 mt-6">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-2">Available Endpoints</h2>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>GET /users - List all users</li>
+                        <li>POST /users - Create a new user</li>
+                        <li>GET /users/{id} - Get user details</li>
+                        <li>PUT /users/{id} - Update user</li>
+                        <li>DELETE /users/{id} - Delete user</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html></content>
